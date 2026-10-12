@@ -1,0 +1,59 @@
+# ---- Secrets & credentials (never commit) ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+secrets/
+.secrets/
+credentials*.json
+service-account*.json
+*token*
+!**/*token*.md
+.npmrc
+.netrc
+
+# ---- OpenClaw / agent data (chat history, memory, config) ----
+.openclaw/
+openclaw.json*
+*.sqlite
+*.sqlite-*
+*.db
+*.jsonl
+transcripts/
+sessions/
+memory/
+MEMORY.md
+AGENTS.md
+SOUL.md
+USER.md
+IDENTITY.md
+BOOTSTRAP.md
+HEARTBEAT.md
+logs/
+*.log
+
+# ---- Hosting / CI local state ----
+.netlify/
+.wrangler/
+.vercel/
+.dev.vars
+
+# ---- Build output & deps ----
+node_modules/
+dist/
+build/
+.cache/
+.astro/
+.next/
+out/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

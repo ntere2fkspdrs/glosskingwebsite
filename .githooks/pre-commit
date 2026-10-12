@@ -1,0 +1,13 @@
+#!/bin/sh
+# Blocks commits containing likely secrets. Bypass only knowingly with --no-verify.
+PATTERNS='[0-9]{8,10}:AA[A-Za-z0-9_-]{30,}|sk_live_[A-Za-z0-9]{10,}|rk_live_[A-Za-z0-9]{10,}|sk-ant-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|nfp_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----|whsec_[A-Za-z0-9]{20,}'
+if git diff --cached -U0 --no-color | grep '^+' | grep -Eq "$PATTERNS"; then
+  echo "pre-commit: possible secret detected in staged changes. Commit blocked." >&2
+  git diff --cached -U0 --no-color | grep '^+' | grep -En "$PATTERNS" | sed -E 's/(.{0,12}).*/\1…[redacted]/' >&2
+  exit 1
+fi
+# Block OpenClaw files even if .gitignore was bypassed with -f
+if git diff --cached --name-only | grep -Eq '(^|/)(\.openclaw/|openclaw\.json|memory/|MEMORY\.md|SOUL\.md|AGENTS\.md|USER\.md|IDENTITY\.md|.*\.jsonl$|.*\.sqlite)'; then
+  echo "pre-commit: OpenClaw/agent files staged. Commit blocked." >&2
+  exit 1
+fi
