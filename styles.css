@@ -1,6 +1,31 @@
 *{box-sizing:border-box;margin:0}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#111;color:#f5f5f5;min-height:100vh;display:flex;flex-direction:column}
-.hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem}
-h1{font-size:clamp(2.5rem,8vw,5rem);color:#1e63d6;letter-spacing:.02em}
-.tagline{margin-top:1rem;font-size:1.25rem;opacity:.85}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#111;color:#f5f5f5;min-height:100vh;display:flex;flex-direction:column;line-height:1.6}
+a{color:#6ea8ff}
+.top{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid #2a2a2a}
+.brand{font-weight:700;font-size:1.25rem;color:#1e63d6;text-decoration:none;letter-spacing:.02em}
+.top nav{display:flex;flex-wrap:wrap;gap:1rem}
+.top nav a{color:#f5f5f5;text-decoration:none;opacity:.8}
+.top nav a.on,.top nav a:hover{opacity:1;color:#6ea8ff}
+main{flex:1}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 1.5rem 3rem}
+h1{font-size:clamp(2rem,7vw,3.5rem);color:#1e63d6;letter-spacing:.02em;line-height:1.15;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.5rem,8vw,5rem)}
+.tagline{font-size:1.4rem}
+.sub{margin-top:.5rem;opacity:.85;max-width:34rem}
+.hero p:last-child{margin-top:1.5rem}
+.btn{display:inline-block;background:#1e63d6;color:#fff;text-decoration:none;padding:.7rem 1.2rem;border-radius:.5rem;margin:.25rem}
+.btn.alt{background:transparent;border:1px solid #1e63d6;color:#6ea8ff}
+.wrap{max-width:46rem;margin:0 auto;padding:2rem 1.25rem 3rem;width:100%}
+.wrap p,.wrap ul{margin-bottom:1rem}
+h2{color:#6ea8ff;margin:2rem 0 .75rem;font-size:1.5rem}
+h3{margin:1rem 0 .4rem;font-size:1.05rem}
+ul{padding-left:1.25rem}
+.callout{font-size:1.25rem;font-weight:600;color:#6ea8ff}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0}
+.card{display:block;background:#1b1b1b;border:1px solid #2a2a2a;border-radius:.6rem;padding:1rem;text-decoration:none;color:#f5f5f5}
+.card h3{margin-top:0;color:#6ea8ff}
+.card:hover{border-color:#1e63d6}
+.note{opacity:.8;margin-top:1.5rem}
+.product{border-top:1px solid #2a2a2a;padding-top:.5rem;margin-top:1.5rem}
+.product h2{margin-top:1rem}
 footer{text-align:center;padding:1rem;font-size:.85rem;opacity:.6}
