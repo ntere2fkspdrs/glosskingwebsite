@@ -11,7 +11,7 @@ main{flex:1}
 .hero>*{position:relative;z-index:2}
 .hero>.hero-bg{position:absolute;z-index:0;left:50%;top:50%;transform:translate(-50%,-50%);width:max(100cqw,166.6cqh);aspect-ratio:4053/2433;container-type:inline-size}
 .hero-bg img{display:block;width:100%;height:100%}
-.hero-bg .plate{position:absolute;left:82.4%;top:69.2%;width:9.2%;height:9.2%;display:flex;align-items:center;justify-content:center;background:#fff;border:.25cqw solid #1e63d6;border-radius:.6cqw;color:#1e63d6;font-weight:800;font-size:1.25cqw;letter-spacing:.04em;line-height:1;white-space:nowrap;transform:rotate(1.5deg)}
+.hero-bg .plate{position:absolute;left:82.4%;top:69.2%;width:9.2%;height:9.2%;display:flex;align-items:center;justify-content:center;background:#fff;border:.15cqw solid #cfcfcf;border-radius:.6cqw;color:#1e63d6;font-weight:800;font-size:1.25cqw;letter-spacing:.04em;line-height:1;white-space:nowrap;transform:rotate(1.5deg)}
 .hero>.hero-shade{position:absolute;z-index:1;inset:0;background:linear-gradient(rgba(10,10,10,.72),rgba(10,10,10,.62))}
 .hero h1,.hero p{text-shadow:0 2px 12px rgba(0,0,0,.8)}
 h1{font-size:clamp(2rem,7vw,3.5rem);color:#1e63d6;letter-spacing:.02em;line-height:1.15;margin-bottom:1rem}
