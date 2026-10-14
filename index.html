@@ -3,16 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gloss King — Car Detailing Products</title>
-  <meta name="description" content="Car detailing products. Coming soon.">
+  <title>Gloss King — Define Your Shine</title>
+  <meta name="description" content="Australian family-owned car care. Well-tested, safe, great-value products for the DIY car enthusiast.">
+  <link rel="icon" href="images/gloss-king-logo.png">
+  <link rel="preload" href="fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="hero">
-    <h1>Gloss King</h1>
-    <p class="tagline">Car detailing products. Coming soon.</p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Gloss King home"><img src="images/gloss-king-logo.png" alt="Gloss King Automotive" width="591" height="709"></a>
+      <p class="motto">Define Your Shine</p>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html#products">Products</a>
+        <a href="about.html">Our Story</a>
+        <a href="safety.html">Safety &amp; Support</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Restoration &amp; gloss <br>to the <em>King's standard</em></h1>
+          <p>Well-tested, safe, great-value car care for the DIY enthusiast. Tested in Australia, owned by an Australian family.</p>
+          <a class="btn" href="#products">Shop now</a>
+        </div>
+        <!-- Hero art: to swap in a product/car photo, replace this img src with images/hero.jpg -->
+        <div class="hero-art"><img src="images/gloss-king-logo.png" alt="Gloss King Automotive crest" width="591" height="709"></div>
+      </div>
+    </section>
+  <section class="section" id="products">
+    <div class="wrap">
+      <h2>Our products</h2>
+      <p class="lead-note">Our launch range. More on the way.</p>
+      <div class="products" data-products></div>
+    </div>
+  </section>
+    <section class="section alt">
+      <div class="wrap story">
+        <div>
+          <p class="eyebrow-title" style="margin-bottom:.5rem">About us</p>
+          <h2 class="big">THE GLOSS KING STORY</h2>
+          <p>Gloss King is an all-Australian, family-owned business based in South-East Queensland. Our team has more than 60 years of combined experience in the Australian automotive industry, from detailing and vehicle prep to service and dealership management.</p>
+          <p>We hand-select every product and test it here in Australia, so you can look after your pride and joy with products you can trust.</p>
+          <a class="btn" href="about.html">Read our story</a>
+        </div>
+        <!-- Photo slot: swap in images/story.jpg (a collectable vehicle) -->
+        <div class="photo-slot"><img class="ph" src="images/gloss-king-logo.png" alt="" width="591" height="709"></div>
+      </div>
+    </section>
+  <section class="trust" aria-label="Why Gloss King">
+    <ul>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg>
+        <div><strong>Secure Checkout</strong><span>Payments handled by Stripe</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 6h12M20 6v14L9 40a3 3 0 0 0 3 4h24a3 3 0 0 0 3-4L28 20V6"/><path d="M14 32h20"/></svg>
+        <div><strong>Tested in Australia</strong><span>Trialled by DIY fans and detailers</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 40S6 30 6 17a9 9 0 0 1 18-3 9 9 0 0 1 18 3c0 13-18 23-18 23z"/></svg>
+        <div><strong>Australian Owned</strong><span>Family owned, South-East Queensland</span></div>
+      </li>
+    </ul>
+  </section>
   </main>
-  <footer>&copy; <span id="y"></span> Gloss King</footer>
+  <footer class="site-footer">
+    <div class="wrap">
+      <h3>Gloss King Automotive</h3>
+      <div class="cols">
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#products">Our products</a></li>
+            <li><a href="about.html">Our story</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>South-East Queensland, Australia</li>
+            <!-- TODO: add the business support email once confirmed (doc says email-only contact) -->
+            <li>Email: coming soon</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Customer service</h4>
+          <ul>
+            <li><a href="safety.html">Safety information</a></li>
+            <li><a href="safety.html#value">Our value promise</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">&copy; <span id="y"></span> Gloss King &middot; Australian family owned</p>
+    </div>
+  </footer>
+  <script src="js/products.js"></script>
   <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
 </html>
